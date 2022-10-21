@@ -34,11 +34,14 @@ class BookFixtures extends Fixture
         $book6->setTitle('Vingt Mille Lieux sous les mers');
         $book6->setImage('vmlslm.jpg');
 
-        $manager->flush($book1);
-        $manager->flush($book2);
-        $manager->flush($book3);
-        $manager->flush($book4);
-        $manager->flush($book5);
-        $manager->flush($book6);
+        $manager->persist($book1);
+        $manager->persist($book2);
+        $manager->persist($book3);
+        $manager->persist($book4);
+        $manager->persist($book5);
+        $manager->persist($book6);
+
+        $manager->flush();
+
     }
 }
